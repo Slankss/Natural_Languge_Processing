@@ -28,7 +28,6 @@ train_accuracy = accuracy_score(news_category_train,train_pred)
 test_pred = model.predict(news_content_test)
 test_accuracy = accuracy_score(news_category_test,test_pred)
 
-
 print("Train accuracy: {:.2f}%".format(train_accuracy * 100))
 print("Test accuracy: {:.2f}%".format(test_accuracy * 100))
 
@@ -37,7 +36,3 @@ disp=ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=model.classes_)
 disp.plot()
 plt.title('Confusion Matrix')
 plt.show()
-
-#test_news = pd.DataFrame({'NEWS': news_content_test, 'CATEGORY': news_category_test})
-
-#test_news['PREDICTED_CATEGORY'] = news_category_pred
